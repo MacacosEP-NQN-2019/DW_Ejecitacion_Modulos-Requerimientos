@@ -1,6 +1,6 @@
 # DW_Ejecitacion_Modulos-Requerimientos
   En este repositorio propio de las actividades de desarrollo web del club de programacion de la EPET N°14, Neuquen (Argentina).
-  Contendra una serie de modulos propios de un proyecto JS, muchos estaran incompletos y tendran indicaciones acerca de su funcionalidad.
+  Contendra una serie de modulos propios de un proyecto JS, muchos estaran incompletos y tendran indicaciones acerca de su funcionalidad. Previo a esto, se le solicita que realice las practicas propuestas en el archivo txt.
   Tener a bien que las descripciones de cada modulo estaran comentadas, y seran parte del esquema de requerimientos:
   
   Modulo (requiere) => (es requerido) Modulo (require) => (es requerido) Modulo
