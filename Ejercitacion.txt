@@ -1,0 +1,78 @@
+//Realice esta ejercitacion previamente a la practica dentro del proyecto
+//Se indicara dentro de las practicas crear elementos, archivos, funciones y variables. Sus nombres son a eleccion libre.
+Ejercicio N°1
+-----------------
+  Realice un programa bimodular (compuesto por dos modulos), uno de los cuales sea el index. 
+El mismo tendra la capacidad de mostrar en consola a traves de la instruccion "console.log()". 
+Como parametro se debe introducir el valor retornado por una funcion desde el objeto del modulo externo llamado a gusto. 
+Dicha funcion debe tomar el parametro nombre, este sera indicado desde del index como una string, 
+y concatenada dentro de la definicion de la funcion en el modulo a requerir, con la frase "bienvenido ",
+de manera que al retornarse, se devuelva a la instruccion console.log() la string "bienvenido nombre".
+
+Ejercicio N°2
+-----------------
+  Realice un programa bimodular, donde el modulo a requerir posea dentro de si, una funcion, 
+y un valor de tipo a eleccion (entero, flotante, caracter, string, array, objeto). 
+El objetivo de dicho ejercicio esta en exportar multiples tipos de elementos JS, pues no solo funciones pueden 
+ser exportadas y requeridas.
+
+Ejercicio N°3
+-----------------
+  Realice un programa bimodular compuesto por los siguientes archivos:
+    -index.js.
+      Sus caracteristicas:
+        Requiere  Built-in    Built-out
+                    http        contenido.js
+      Debera crear un servidor, e imprimir en el cliente el contenido devuelto por el modulo contenido.js
+     mediante la instruccion contenido(). 
+     //Se recomienda para dicha resolucion consultar el ejemplo (https://www.w3schools.com/nodejs/shownodejs.asp?filename=demo_intro)
+     /*
+     En lugar de utilizar el literal (consultar en google la definicion de literal para la programacion) 'Hello World!' se debera 
+     introducir como parametro de la funcion res.end() la funcion que devuelve el contenido del modulo externo.
+     */
+     -contenido.js
+        Sus caracteristicas:
+          Requiere  Built-in    Built-out
+                      fs          pagina.html
+         Debera crear la funcion exportable que retorna el contenido al modulo requeridor. Dicho contenido proviene de la informacion
+        almacenada en el archivo pagina.html. Debera saber que para obtenir dicha informacion, no podra utilizar la instruccion
+        require() pues, html, como otras extenciones (consultar definicion si es necesario), no son leidas correctamente.
+          Por lo tanto para poder obtener la informacion que sera retornada por la funcion "contenido()" se debera usar
+         el modulo built-in "fs" (FileSystem) quien posee la capacidad de operar lecturas, escrituras y otros dentro de los
+         directorios del servidor.
+       /*
+        Para dicha resolucion se recomienda consultar https://www.w3schools.com/nodejs/nodejs_filesystem.asp, donde aparece
+        codigo simple de ejemplo para la realizacion de una lectura (read). Tenga en cuenta que en sistemas operativos linux
+        la instruccion de lectura podra ser la nativa de nodeJS (asincronica) por lo que 
+        fs.readfile() operara correctamente, mientras que en sistemas operativos privados como en productos de Microsoft
+        (mas reticentes al comportamieno asincronico) se debera utilizar la funcion readfilesync().
+        */
+        
+        -pagina.html
+        La misma  puede contener cualquier texto html que le interese. Tenga a bien, que todos los archivos que sean tercerizados 
+        dentro del servidor, no seran compartidos con el cliente. Por lo que, si desea incorporar CSS, este debe estar directamente
+        incorporado dentro del archivo, o llamado desde la web. Lo mismo para archivos JS para cliente, imagines, videos, etc.
+        
+ Ejercicio N°4
+ ----------------
+ Investigue como enviar al cliente archivos secundarios. 
+ ¿De que manera opera la instruccion writeHead(200, {"Content-type":"text/html"})?
+ ¿Que sucede si en la funcion readfile() leyeramos la informacion de un .JPG y luego colocaramos su return dentro de la 
+ funcion res.write() o res.end()? ¿Funcionara si coloco dentro del writeHead() un objeto diferente?
+ Tenga a bien, que, dentro de un archivo html, solemos colocar "links" a enlaces externos o internos del servidor. Cuando 
+ consultamos enlaces internos del servidor, este recive una REQUEST (una solicitud) a traves de el metodo GET del protocolo HTTP.
+ Si nosotros somos capaces de leer que es lo que se solicita, podriamos ver que es lo que devemos responder (RESPONSE).
+ 
+  practica del ejercicio 4 a)
+    investigar el modulo built-in URL https://www.c-sharpcorner.com/article/url-module-in-node-js/ 
+    y realizar un codigo que nos permita imprimir en consola el contenido que proviene de la URL
+    
+  practica del ejercicio 4 b)
+    a partir de el codigo para leer la url request, crear un modulo que opere sobre url y que sepa los nombres de los 
+    archivos disponibles para transmitir, de manera que al recibir una REQUEST el servidor, esta sea evaluada por el modulo
+    y determine (funcion recomendada Switch) y retorne al modulo del server el contenido apropiado para resolver dicha solicitud.
+    
+        
+        
+        
+        
