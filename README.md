@@ -16,7 +16,7 @@
   Y en el caso de que se indique "este modulo requerira la funcionalidad suma, del modulo 'operaciones.js', imprimiendo en consola el resultado de dicha operacion tomando como parametros al entero 5 y entero 2" se interepretara que el mismo no es un Built-in de NodeJS.
   
   let op = require('./operaciones.js');
-  console.log(op.suma(5,7));                    //imprimira en consola 7
+  console.log(op.suma(5,2));                    //imprimira en consola 7
   
   De indicarse que un modulo pertenece a los Built-in (nativos) de NodeJS la sintaxis difiere ligeramente:
   
